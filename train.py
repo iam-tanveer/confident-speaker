@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
 
 # --- 1. CONFIGURATION ---
-DATA_DIR = "data" # Your folder containing 'high', 'medium', 'low' folders
+DATA_DIR = "data" 
 CLASSES = {"low": 0, "high": 1}
 
 def extract_features(file_path):
@@ -25,7 +25,7 @@ def extract_features(file_path):
         return None
 
 # --- 2. LOAD DATA ---
-print("Extracting features from 3800 files... (Grab a coffee, this takes a few minutes)")
+print("Extracting features from files... This may take a moment.")
 X = []
 y_labels = []
 
@@ -54,7 +54,7 @@ for label_name, label_idx in CLASSES.items():
 X = np.array(X)
 y_labels = np.array(y_labels)
 
-# 3. Failsafe: Check how many classes were actually loaded
+# 3. Check how many classes were actually loaded
 unique_classes = np.unique(y_labels)
 print(f"\nFound {len(X)} total files across {len(unique_classes)} classes.")
 

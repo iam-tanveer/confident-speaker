@@ -45,14 +45,14 @@ def record_and_multiply(label):
     print(f"\n✅ Successfully added {NUM_CLIPS * MULTIPLIER} files to the '{label}' folder!")
 
 if __name__ == "__main__":
-    print("🎤 VocaConfidence - Voice Calibration Tool")
+    print("🎤 Confident Speaker - Voice Calibration Tool")
     
     # Record the confident clips
     print("\n[STEP 1] Be authoritative, project your voice, and speak clearly.")
     record_and_multiply("high")
     
     # Record the nervous clips
-    # print("\n[STEP 2] Speak softer, add hesitation ('um', 'uh'), and sound nervous.")
-    # record_and_multiply("low")
+    print("\n[STEP 2] Speak softer, add hesitation ('um', 'uh'), and sound nervous.")
+    record_and_multiply("low")
     
     print("\n🎉 Calibration data generated! Run train.py to update your model.")
